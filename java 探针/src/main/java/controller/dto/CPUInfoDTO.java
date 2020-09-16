@@ -1,5 +1,9 @@
 package controller.dto;
 
+import org.hyperic.sigar.FileSystem;
+
+import java.util.ArrayList;
+
 /**
  *  CPU信息
  */
@@ -21,6 +25,37 @@ public class CPUInfoDTO {
     private String mAll;
     /** 内存总量 */
     private String mUsed;
+    /** 内存总量 */
+    private String mUsedProportion;
+
+    /** 硬盘数据 */
+    ArrayList<FileSysInfo> fileSysInfos;
+
+    private String systemName ;
+
+    public String getSystemName() {
+        return systemName;
+    }
+
+    public void setSystemName(String systemName) {
+        this.systemName = systemName;
+    }
+
+    public ArrayList<FileSysInfo> getFileSysInfos() {
+        return fileSysInfos;
+    }
+
+    public void setFileSysInfos(ArrayList<FileSysInfo> fileSysInfos) {
+        this.fileSysInfos = fileSysInfos;
+    }
+
+    public String getmUsedProportion() {
+        return mUsedProportion;
+    }
+
+    public void setmUsedProportion(String mUsedProportion) {
+        this.mUsedProportion = mUsedProportion;
+    }
 
     public String getCpuinfo() {
         return cpuinfo;
